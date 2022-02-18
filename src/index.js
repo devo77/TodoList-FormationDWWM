@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import "./functionBased/App.css";
 
 //Router
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 //Routes remplace switch pour la V6
 import { Route, Routes } from "react-router-dom";
@@ -21,7 +21,7 @@ import SinglePage from  "./functionBased/pages/SinglePage"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
 
       <Routes>
