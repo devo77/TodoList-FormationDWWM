@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import "./functionBased/App.css";
 
 //Router
-import { HashRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 //Routes remplace switch pour la V6
 import { Route, Routes } from "react-router-dom";
@@ -21,7 +21,7 @@ import SinglePage from  "./functionBased/pages/SinglePage"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL} >
       <Navbar />
 
       <Routes>
@@ -36,7 +36,7 @@ ReactDOM.render(
         <Route path="*" element={<NotMatch />} />
         {/* <TodoContainer /> */}
       </Routes>
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
